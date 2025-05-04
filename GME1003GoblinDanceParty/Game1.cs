@@ -12,7 +12,6 @@ namespace GME1003GoblinDanceParty
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        //loijusdflksj
         //Declare some variables
         private int _numStars;          //how many stars?
         private List<int> _starsX;      //list of star x-coordinates
