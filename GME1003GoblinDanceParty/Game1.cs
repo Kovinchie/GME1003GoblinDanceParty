@@ -16,14 +16,12 @@ namespace GME1003GoblinDanceParty
         private int _numStars;          //how many stars?
         private List<int> _starsX;      //list of star x-coordinates
         private List<int> _starsY;      //list of star y-coordinates
+        private List<Color> _starColor; //KOVINCHIE CHANGE list of star colors 
+        private List<float> _starScale; //KOVINCHIE CHANGE list of star scale
+        private List<float> _starTransparency;  // KOVINCHIE CHNAGE list of transparency
+        private List<float> _starRotation;      // KOVINCHIE CHANGE list of rotation
 
         private Texture2D _starSprite;  //the sprite image for our star
-
-        private Color _starColor;       //let's have fun with colour!!
-        private float _starScale;       //star size
-        private float _starTransparency;//star transparency
-        private float _starRotation;    //star rotation
-
 
         //***This is for the goblin. Ignore it.
         Goblin goblin;
@@ -68,25 +66,25 @@ namespace GME1003GoblinDanceParty
             //ToDo: List of Colors
             for (int i = 0; i < _numStars; ++i)
             {
-                new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));
+                _starColor.Add(new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129)));
             }
 
             //ToDo: List of scale values
             for (int i = 0; i < _numStars; ++i)
             {
-                _rng.Next(50, 100) / 200f;
+                _starScale.Add(_rng.Next(50, 100) / 200f);
             }
 
             //ToDo: List of transparency values
             for (int i = 0; i < _numStars; ++i)
             {
-                _rng.Next(25, 101) / 100f;
+                _starTransparency.Add(_rng.Next(25, 101) / 100f);
             }
 
             //ToDo: List of rotation values
             for (int i = 0; i < _numStars; ++i)
             {
-                _rng.Next(0, 101) / 100f;
+                _starRotation.Add(_rng.Next(0, 101) / 100f);
             }
 
             base.Initialize();
