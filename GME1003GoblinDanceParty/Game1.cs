@@ -19,7 +19,6 @@ namespace GME1003GoblinDanceParty
 
         private Texture2D _starSprite;  //the sprite image for our star
 
-        private Random _rng;            //for all our random number needs
         private Color _starColor;       //let's have fun with colour!!
         private float _starScale;       //star size
         private float _starTransparency;//star transparency
@@ -40,15 +39,18 @@ namespace GME1003GoblinDanceParty
 
         protected override void Initialize()
         {
-            Random _rng = new Random();             //KOVINCHIE CHANGE finished up this random
-            _numStars = _rng.Next(100, 301);        //KOVINCHIE CHANGE i made this into a random number between 100 and 300
+            Random _rng = new Random();             //KOVINCHIE CHANGE i made it into a decloration instead of an assign
+            _numStars = 100;                        //KOVINCHIE CHANGE i made this into a random number between 100 and 300
             _starsX = new List<int>();              //stars X coordinate
             _starsY = new List<int>();              //stars Y coordinate
 
+
+
+            /*
             _starColor = new Color(128 + _rng.Next(0,129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));                   //this is a "relatively" easy way to create random colors
             _starScale = _rng.Next(50, 100) / 200f;         //this will affect the size of the stars
             _starTransparency = _rng.Next(25, 101)/100f;    //star transparency
-            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation
+            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation */
 
             //use a separate for loop for each list - for practice
             //List of X coordinates
@@ -65,13 +67,27 @@ namespace GME1003GoblinDanceParty
 
             //ToDo: List of Colors
             for (int i = 0; i < _numStars; ++i)
-            
+            {
+                new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));
+            }
+
             //ToDo: List of scale values
+            for (int i = 0; i < _numStars; ++i)
+            {
+                _rng.Next(50, 100) / 200f;
+            }
 
             //ToDo: List of transparency values
+            for (int i = 0; i < _numStars; ++i)
+            {
+                _rng.Next(25, 101) / 100f;
+            }
 
             //ToDo: List of rotation values
-
+            for (int i = 0; i < _numStars; ++i)
+            {
+                _rng.Next(0, 101) / 100f;
+            }
 
             base.Initialize();
         }
