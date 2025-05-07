@@ -40,14 +40,14 @@ namespace GME1003GoblinDanceParty
 
         protected override void Initialize()
         {
-            _rng = new Random();        //finish setting up our Randon 
-            _numStars = 100;              //this would be better as a random number between 100 and 300
-            _starsX = new List<int>();  //stars X coordinate
-            _starsY = new List<int>();  //stars Y coordinate
+            Random _rng = new Random();             //KOVINCHIE CHANGE finished up this random
+            _numStars = _rng.Next(100, 301);        //KOVINCHIE CHANGE i made this into a random number between 100 and 300
+            _starsX = new List<int>();              //stars X coordinate
+            _starsY = new List<int>();              //stars Y coordinate
 
             _starColor = new Color(128 + _rng.Next(0,129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));                   //this is a "relatively" easy way to create random colors
-            _starScale = _rng.Next(50, 100) / 200f; //this will affect the size of the stars
-            _starTransparency = _rng.Next(25, 101)/100f;   //star transparency
+            _starScale = _rng.Next(50, 100) / 200f;         //this will affect the size of the stars
+            _starTransparency = _rng.Next(25, 101)/100f;    //star transparency
             _starRotation = _rng.Next(0, 101) / 100f;       //star rotation
 
             //use a separate for loop for each list - for practice
@@ -64,6 +64,7 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of Colors
+            for (int i = 0; i < _numStars; ++i)
             
             //ToDo: List of scale values
 
