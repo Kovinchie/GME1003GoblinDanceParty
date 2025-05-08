@@ -64,9 +64,9 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of Colors
-            for (int i = 0; i < _numStars; ++i)
+            for (int i = 0; i < _numStars; i++)
             {
-                _starColor.Add(new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129)));
+                _starColor.Add(new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129))); //all star rotation value are between 0 and 100
             }
 
             //ToDo: List of scale values
@@ -135,10 +135,10 @@ namespace GME1003GoblinDanceParty
                 _spriteBatch.Draw(_starSprite, 
                     new Vector2(_starsX[i], _starsY[i]),    //set the star position
                     null,                                   //ignore this
-                    _starColor * _starTransparency,         //set colour and transparency
-                    _starRotation,                          //set rotation
+                    _starColor[i] * _starTransparency[i],         //set colour and transparency
+                    _starRotation[i],                          //set rotation
                     new Vector2(_starSprite.Width / 2, _starSprite.Height / 2), //ignore this
-                    new Vector2(_starScale, _starScale),    //set scale (same number 2x)
+                    new Vector2(_starScale[i], _starScale[i]),    //set scale (same number 2x)
                     SpriteEffects.None,                     //ignore this
                     0f);                                    //ignore this
             }
