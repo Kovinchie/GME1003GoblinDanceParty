@@ -38,17 +38,13 @@ namespace GME1003GoblinDanceParty
         protected override void Initialize()
         {
             Random _rng = new Random();             //KOVINCHIE CHANGE i made it into a decloration instead of an assign
-            _numStars = 100;                        //KOVINCHIE CHANGE i made this into a random number between 100 and 300
+            _numStars = _rng.Next(100,301);         //KOVINCHIE CHANGE i made this into a random number between 100 and 300
             _starsX = new List<int>();              //stars X coordinate
             _starsY = new List<int>();              //stars Y coordinate
-
-
-
-            /*
-            _starColor = new Color(128 + _rng.Next(0,129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129));                   //this is a "relatively" easy way to create random colors
-            _starScale = _rng.Next(50, 100) / 200f;         //this will affect the size of the stars
-            _starTransparency = _rng.Next(25, 101)/100f;    //star transparency
-            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation */
+            _starColor = new List<Color>();         //KOVINCHIE CHANGE now is a list of colors
+            _starScale = new List<float>();         //KOVINCHIE CHANGE now is a list of floats
+            _starTransparency = new List<float>();  //KOVINCHIE CHANGE now is a list of floats
+            _starRotation = new List<float>();      //KOVINCHIE CHANGE now is a list of floats
 
             //use a separate for loop for each list - for practice
             //List of X coordinates
@@ -64,9 +60,9 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of Colors
-            for (int i = 0; i < _numStars; i++)
+            for (int i = 0; i < _numStars; ++i)
             {
-                _starColor.Add(new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129))); //all star rotation value are between 0 and 100
+                _starColor.Add(new Color(128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129), 128 + _rng.Next(0, 129)));
             }
 
             //ToDo: List of scale values
