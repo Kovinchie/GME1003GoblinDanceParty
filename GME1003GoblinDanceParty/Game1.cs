@@ -71,7 +71,7 @@ namespace GME1003GoblinDanceParty
                 _starScale.Add(_rng.Next(50, 100) / 200f);
             }
 
-            //ToDo: List of transparency values
+            //ToDo: List of transparency values f
             for (int i = 0; i < _numStars; ++i)
             {
                 _starTransparency.Add(_rng.Next(25, 101) / 100f);
