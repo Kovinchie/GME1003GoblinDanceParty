@@ -1,0 +1,29 @@
+first, I apologize for not using your beautiful goblin. I replaced him...
+
+I am completing all 1 to 6 tasks, AND I'm not using AI; instead, I'm just 
+gonna search up things I wanna figure out.
+
+i decided every time i put down my code to do something else i would save or after finishing a part of the 
+code i would save and push
+
+Decisions made:
+I randomized the star image from just a single image to a list of random like how everything else was done 
+also made a cool gamer play games, then sized a background for the place
+
+Problems I had:
+the custom star replacement i made was small so i used the scale part in the code but the scale messing 
+stuff up the center part with the pieces the fix is just gonna be to make it bigger images, but I did try 
+to use numbers and stuff to figure out the placement I thing i need the scale to times the width and height
+but am taking the easy method
+
+
+BELOW ARE WRITING POINTS THE REQUIREMENTS IN THE READ ME FILE
+-----------------------------------------------------------
+Add a readme file - text, Word Doc, something easy for me to open - to your Visual Studio project. In the file,
+describe the following:
+
+How many of the steps 1-6 did you complete // 1 color, 2 scale, 3 size, 4 amount, 5 rotation, 6 background
+How did you decide when it was appropriate to commit/push your changes
+How many commits/pushes did you execute
+Any specific troubles you had with GitHub or with completing the assignment
+How did you use AI, if you did
