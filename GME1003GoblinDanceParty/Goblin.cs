@@ -62,7 +62,6 @@ namespace GME1003GoblinDanceParty
             int column = _currentFrame;
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
-            //Rectangle destinationRectangle = new Rectangle((int)_position.X, (int)_position.Y, width, height);
 
             spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null);
             spriteBatch.Draw(_goblinSprite, _position, sourceRectangle, Color.White, 0, new Vector2(width / 2, height / 2), new Vector2(5, 5), _faceLeft, 0);
